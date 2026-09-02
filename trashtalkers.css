@@ -1,4 +1,5 @@
-/* TrashTalkers MFL theme — staging build 1\n   Complete appearance baseline: Military Heroes production build 13 */
+/* TrashTalkers MFL theme — staging build 2
+   Complete appearance baseline: Military Heroes production build 13 */
 :root {
   --tt-bg: #06090d;
   --tt-panel: rgba(9, 14, 18, 0.97);
@@ -554,6 +555,40 @@ span.injurystatus,
 #add_drop select[size] option:checked {
   color: #080808;
   background: var(--tt-gold);
+}
+
+/* MFL may render Add/Drop under a generic options page ID.
+   Detect its tall player pickers so the v13 treatment still applies. */
+body:has(select[size]:not([size="1"])) .report th,
+.pagebody:has(select[size]:not([size="1"])) .report th {
+  border-color: var(--tt-line) !important;
+  color: #fff !important;
+  background: #111416 !important;
+}
+
+body:has(select[size]:not([size="1"])) .report th a,
+body:has(select[size]:not([size="1"])) .report th a:link,
+body:has(select[size]:not([size="1"])) .report th a:visited {
+  color: #fff !important;
+}
+
+select[size]:not([size="1"]) {
+  border-color: var(--tt-line) !important;
+  color: var(--tt-text) !important;
+  background: #0e1113 !important;
+  color-scheme: dark;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select[size]:not([size="1"]) option {
+  color: var(--tt-text) !important;
+  background: #0e1113 !important;
+}
+
+select[size]:not([size="1"]) option:checked {
+  color: #080808 !important;
+  background: var(--tt-gold) !important;
 }
 
 /* Trades: integrate the expiration and optional-message form with the theme. */
