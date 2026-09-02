@@ -1,0 +1,876 @@
+/* TrashTalkers MFL theme — staging build 5
+   Complete appearance baseline: Military Heroes production build 13 */
+:root {
+  --tt-bg: #06090d;
+  --tt-panel: rgba(9, 14, 18, 0.97);
+  --tt-panel-alt: #111a20;
+  --tt-panel-hover: #1a2830;
+  --tt-text: #f4f2ed;
+  --tt-muted: #b8b8b2;
+  --tt-bronze: #c66a18;
+  --tt-gold: #f2a72b;
+  --tt-red: #b83224;
+  --tt-line: rgba(242, 167, 43, 0.28);
+  --tt-shadow: 0 12px 30px rgba(0, 0, 0, 0.36);
+  --tt-radius: 8px;
+  --tt-max-width: 1280px;
+  --tt-banner: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-banner.jpg");
+  --tt-background: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-background-v2.png");
+  --tt-hall-background: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-background-v2.png");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--tt-bg) !important;
+}
+
+body,
+body.full-width {
+  min-width: 0;
+  margin: 0;
+  color: var(--tt-text);
+  background:
+    linear-gradient(rgba(5, 7, 8, 0.12), rgba(5, 7, 8, 0.28)),
+    var(--tt-background) center top / cover no-repeat fixed !important;
+  background-attachment: fixed;
+  font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+a,
+a:link,
+a:visited {
+  color: #ffd08a;
+  text-decoration-color: rgba(241, 213, 163, 0.5);
+  text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus-visible {
+  color: #ffffff;
+  text-decoration-color: var(--tt-red);
+}
+
+.pagebody a,
+.pagebody a:link,
+.pagebody a:active,
+.pagebody a:visited {
+  color: #ffd08a;
+}
+
+.pagebody a:hover,
+.pagebody a:focus-visible {
+  color: #ffffff;
+  text-decoration-color: var(--tt-red);
+}
+
+.pageheader {
+  display: none;
+}
+
+/* The theme supplies its own responsive banner in #contentframe. */
+.leaguelogo {
+  display: none !important;
+}
+
+/* Hide the retired lower-corner TrashTalkers logo injected by league HTML. */
+img[src*="7r5ihTFx_o.png"],
+p:has(> img[src*="7r5ihTFx_o.png"]) {
+  display: none !important;
+}
+
+.pagebody {
+  width: 100%;
+  max-width: none;
+  padding: 0 16px 36px;
+  color: var(--tt-text);
+  background: transparent !important;
+}
+
+body.full-width .pagebody {
+  max-width: none;
+  background: transparent !important;
+}
+
+/* Preserve the stadium backdrop when wide screens expose larger side margins. */
+@media (min-width: 1500px) {
+  body,
+  body.full-width {
+    background:
+      linear-gradient(rgba(5, 7, 8, 0.08), rgba(5, 7, 8, 0.22)),
+      var(--tt-hall-background) center top / cover no-repeat fixed !important;
+  }
+}
+
+#contentframe,
+.pagefooter {
+  width: min(100%, var(--tt-max-width));
+  max-width: var(--tt-max-width);
+  margin-inline: auto;
+}
+
+#home #contentframe::before {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1600 / 435;
+  margin: 16px 0 12px;
+  border: 1px solid rgba(242, 167, 43, 0.55);
+  border-radius: var(--tt-radius);
+  background-image: var(--tt-banner);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: var(--tt-shadow);
+  content: "";
+}
+
+/* Primary MFL menu */
+.myfantasyleague_menu {
+  border: 0;
+  border-bottom: 3px solid var(--tt-bronze);
+  background: rgba(5, 7, 8, 0.98) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.myfantasyleague_menu ul,
+.myfantasyleague_menu ul li ul,
+.myfantasyleague_menu ul ul li {
+  background: #0d1012 !important;
+}
+
+.myfantasyleague_menu ul,
+.myfantasyleague_menu ul li ul {
+  border-bottom-color: var(--tt-bronze) !important;
+  border-top-color: var(--tt-bronze) !important;
+}
+
+.myfantasyleague_menu > ul {
+  max-width: var(--tt-max-width);
+  margin-inline: auto;
+}
+
+.myfantasyleague_menu a,
+.myfantasyleague_menu a:link,
+.myfantasyleague_menu a:visited {
+  color: #e6e9ea;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.myfantasyleague_menu ul li a,
+.myfantasyleague_menu ul ul li a,
+.myfantasyleague_menu ul ul li.has-sub a {
+  border-color: rgba(242, 167, 43, 0.2) !important;
+  color: #eceff0 !important;
+}
+
+.myfantasyleague_menu li:hover > a,
+.myfantasyleague_menu li:focus-within > a {
+  color: #fff;
+  background: var(--tt-red) !important;
+}
+
+.myfantasyleague_menu > label span,
+.myfantasyleague_menu ul li label span,
+.myfantasyleague_tabmenu > label span {
+  background: var(--tt-bronze) !important;
+}
+
+.myfantasyleague_menu > label span::before,
+.myfantasyleague_menu > label span::after,
+.myfantasyleague_menu ul li label span::before,
+.myfantasyleague_menu ul li label span::after,
+.myfantasyleague_tabmenu > label span::before,
+.myfantasyleague_tabmenu > label span::after {
+  background: #101315 !important;
+}
+
+/* League shortcut navigation */
+#hsubmenu {
+  margin: 0 0 10px;
+  overflow-x: auto;
+  border: 1px solid var(--tt-line);
+  border-radius: var(--tt-radius);
+  background: rgba(12, 15, 17, 0.96);
+  scrollbar-width: thin;
+}
+
+#hsubmenuitems {
+  display: flex;
+  min-width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#hsubmenuitems li {
+  float: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+#hsubmenuitems a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--tt-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#hsubmenuitems a:hover,
+#hsubmenuitems a:focus-visible {
+  color: #fff;
+  background: rgba(143, 35, 35, 0.75);
+}
+
+/* Homepage tabs */
+.myfantasyleague_tabmenu {
+  margin-bottom: 14px;
+  border: 1px solid var(--tt-line);
+  border-radius: var(--tt-radius);
+  background: #0d1012 !important;
+  overflow: hidden;
+}
+
+.myfantasyleague_tabmenu ul#homepagetabs {
+  border-bottom-color: var(--tt-bronze) !important;
+  background: #0d1012 !important;
+}
+
+.myfantasyleague_tabmenu #homepagetabs li a {
+  border-color: rgba(242, 167, 43, 0.2) !important;
+  color: #eceff0 !important;
+}
+
+.myfantasyleague_tabmenu ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.myfantasyleague_tabmenu li {
+  float: none;
+}
+
+.myfantasyleague_tabmenu li a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--tt-muted);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.myfantasyleague_tabmenu li.currenttab a,
+.myfantasyleague_tabmenu li:hover a {
+  color: #fff;
+  background: var(--tt-red);
+}
+
+.myfantasyleague_tabmenu #homepagetabs li.currenttab,
+.myfantasyleague_tabmenu #homepagetabs li.currenttab:hover {
+  background: var(--tt-red) !important;
+  box-shadow: none;
+}
+
+/* Homepage grid */
+#homepagecolumns {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 12px 0;
+  table-layout: fixed;
+}
+
+#homepagecolumns > tbody > tr > .homepagecolumn,
+#homepagecolumns > tr > .homepagecolumn {
+  padding: 0;
+  vertical-align: top;
+}
+
+.homepagemodule,
+.report {
+  width: 100%;
+  margin: 0 0 14px;
+  overflow: hidden;
+  border: 1px solid var(--tt-line);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--tt-radius);
+  color: var(--tt-text);
+  background: var(--tt-panel);
+  box-shadow: var(--tt-shadow);
+}
+
+table.report,
+table.homepagemodule,
+.homepagecolumn .homepagemodule {
+  color: var(--tt-text) !important;
+  background: var(--tt-panel) !important;
+}
+
+caption,
+.homepagemodule caption,
+.homepagecolumn .homepagemodule caption {
+  padding: 12px 14px;
+  border: 0;
+  border-bottom: 2px solid var(--tt-bronze);
+  color: #fff;
+  background: linear-gradient(100deg, #292d30, #171a1c 68%);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+caption span {
+  padding-left: 0;
+  background: none;
+}
+
+caption a,
+caption a:link,
+caption a:active,
+caption a:visited,
+.homepagecolumn .homepagemodule caption a,
+.homepagecolumn .homepagemodule caption a:link,
+.homepagecolumn .homepagemodule caption a:visited {
+  color: #ffd08a !important;
+}
+
+caption a:hover,
+.homepagecolumn .homepagemodule caption a:hover {
+  color: #fff !important;
+}
+
+.report th,
+.homepagemodule th {
+  padding: 8px 10px;
+  border: 0;
+  border-bottom: 1px solid rgba(242, 167, 43, 0.24);
+  color: #eceff0;
+  background: #111416;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Add/Drop only: keep player-picker column headers readable when MFL applies a pale skin. */
+#body_add_drop .report th,
+#add_drop .report th,
+#body_options_47 .report th,
+#options_47 .report th,
+#body_options_129 .report th,
+#options_129 .report th,
+form[action*="add_drop"] .report th,
+form[action*="options"] input[name="ADD_ID"] ~ .report th {
+  border-color: var(--tt-line) !important;
+  color: #fff !important;
+  background: #111416 !important;
+}
+
+#body_add_drop .report th a,
+#body_add_drop .report th a:link,
+#body_add_drop .report th a:visited,
+#add_drop .report th a,
+#add_drop .report th a:link,
+#add_drop .report th a:visited,
+#body_options_47 .report th a,
+#body_options_47 .report th a:link,
+#body_options_47 .report th a:visited,
+#options_47 .report th a,
+#options_47 .report th a:link,
+#options_47 .report th a:visited,
+#body_options_129 .report th a,
+#body_options_129 .report th a:link,
+#body_options_129 .report th a:visited,
+#options_129 .report th a,
+#options_129 .report th a:link,
+#options_129 .report th a:visited,
+form[action*="add_drop"] .report th a,
+form[action*="add_drop"] .report th a:link,
+form[action*="add_drop"] .report th a:visited {
+  color: #fff !important;
+}
+
+.report td,
+.homepagemodule td {
+  padding: 8px 10px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+  color: var(--tt-text);
+  vertical-align: middle;
+}
+
+.oddtablerow,
+.eventablerow {
+  color: var(--tt-text) !important;
+  background: transparent !important;
+}
+
+.eventablerow {
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+
+.report .oddtablerow td,
+.report .eventablerow td,
+.homepagemodule .oddtablerow td,
+.homepagemodule .eventablerow td {
+  border-color: rgba(255, 255, 255, 0.075);
+  color: var(--tt-text) !important;
+  background: transparent !important;
+}
+
+.pagebody .report td a,
+.pagebody .report td a:link,
+.pagebody .report td a:active,
+.pagebody .report td a:visited,
+.pagebody .homepagemodule td a,
+.pagebody .homepagemodule td a:link,
+.pagebody .homepagemodule td a:active,
+.pagebody .homepagemodule td a:visited {
+  color: #ffd08a;
+}
+
+.pagebody .report td a:hover,
+.pagebody .homepagemodule td a:hover {
+  color: #fff;
+}
+
+.report tr:hover > td,
+.homepagemodule tr:hover > td {
+  background: var(--tt-panel-hover);
+}
+
+.reportfooter td,
+td.reportfooter {
+  padding: 9px 10px;
+  background: #0e1113;
+  text-align: center;
+}
+
+.warning {
+  color: #efc482;
+}
+
+.pagebody h2,
+.pagebody h3 {
+  color: #f4f2ed;
+}
+
+.pagebody h2 a,
+.pagebody h2 a:link,
+.pagebody h2 a:active,
+.pagebody h2 a:visited,
+.pagebody h3 a,
+.pagebody h3 a:link,
+.pagebody h3 a:active,
+.pagebody h3 a:visited {
+  color: #ffd08a;
+}
+
+.pagebody h2 a:hover,
+.pagebody h3 a:hover {
+  color: #fff;
+}
+
+.reportnavigation,
+span.reportnavigation {
+  color: var(--tt-muted);
+}
+
+.reportnavigationheader,
+.reportnavigation .currentweek {
+  color: #efc482;
+}
+
+.reportnavigation a,
+.reportnavigation a:link,
+.reportnavigation a:active,
+.reportnavigation a:visited {
+  color: #ffd08a;
+}
+
+.reportnavigation a:hover {
+  color: #fff;
+}
+
+/* Standings and franchise artwork */
+#standings .ficon,
+#standings .ficonname {
+  text-align: left;
+}
+
+#standings .franchiseicon,
+.franchiseicon {
+  width: min(100%, 300px);
+  max-width: 300px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.franchiseicon:hover {
+  opacity: 0.9;
+}
+
+.newposition td,
+.newposition th {
+  border-top: 3px solid var(--tt-gold) !important;
+  box-shadow: none;
+}
+
+/* Make MFL injury designations unmistakable across its alternate report markup. */
+span.injurystatus,
+#options_08 td.status span.warning,
+#options_236 td.status span.warning,
+#reports_ranks td.player > span.warning,
+#options_117 td.player > span.warning,
+#options_05 .report td > a[class^="position_"] + span.warning {
+  display: inline-block;
+  margin-left: .2em;
+  padding: .05em .28em;
+  border: 1px solid #edc26c;
+  border-radius: 3px;
+  background: #d9a441;
+  color: #080808 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: .02em;
+  text-decoration: none;
+  vertical-align: .05em;
+}
+
+/* Add/Drop player-picker headers. */
+#body_add_drop .report th,
+#add_drop .report th {
+  border-color: var(--tt-line) !important;
+  color: #eceff0 !important;
+  background: #111416 !important;
+}
+
+#body_add_drop .report th a,
+#body_add_drop .report th a:link,
+#body_add_drop .report th a:visited,
+#add_drop .report th a,
+#add_drop .report th a:link,
+#add_drop .report th a:visited {
+  color: #eceff0 !important;
+}
+
+#body_add_drop select[size],
+#add_drop select[size] {
+  border-color: #69727a !important;
+  color: #111416 !important;
+  background: #fff !important;
+}
+
+#body_add_drop select[size],
+#add_drop select[size] {
+  color-scheme: light;
+}
+
+#body_add_drop select[size] option,
+#add_drop select[size] option {
+  color: #111416;
+  background: #fff;
+}
+
+#body_add_drop select[size] option:checked,
+#add_drop select[size] option:checked {
+  color: #080808;
+  background: var(--tt-gold);
+}
+
+/* MFL may render player pickers under generic option-page IDs.
+   Detect the tall controls so their headers remain readable. */
+body:has(select:is([multiple], [size]:not([size="1"]))) .report th,
+.pagebody:has(select:is([multiple], [size]:not([size="1"]))) .report th {
+  border-color: var(--tt-line) !important;
+  color: #fff !important;
+  background: #111416 !important;
+}
+
+body:has(select:is([multiple], [size]:not([size="1"]))) .report th a,
+body:has(select:is([multiple], [size]:not([size="1"]))) .report th a:link,
+body:has(select:is([multiple], [size]:not([size="1"]))) .report th a:visited {
+  color: #fff !important;
+}
+
+select:is([multiple], [size]:not([size="1"])) {
+  border-color: #69727a !important;
+  color: #111416 !important;
+  background: #fff !important;
+  color-scheme: light;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select:is([multiple], [size]:not([size="1"])) option {
+  color: #111416 !important;
+  background: #fff !important;
+}
+
+select:is([multiple], [size]:not([size="1"])) option:checked {
+  color: #080808 !important;
+  background: var(--tt-gold) !important;
+}
+
+/* Trades: integrate the expiration and optional-message form with the theme. */
+#options_05 table:has(textarea),
+#options_05 table:has(textarea) tbody,
+#options_05 table:has(textarea) tr {
+  background: transparent !important;
+}
+
+#options_05 table:has(textarea) th,
+#options_05 table:has(textarea) td {
+  border-color: var(--tt-line) !important;
+  color: var(--tt-text) !important;
+  background: #111416 !important;
+}
+
+#options_05 table:has(textarea) select,
+#options_05 table:has(textarea) input:not([type="submit"]):not([type="button"]),
+#options_05 table:has(textarea) textarea {
+  border: 1px solid #586169 !important;
+  color: var(--tt-text) !important;
+  background: #0e1113 !important;
+  color-scheme: dark;
+}
+
+#options_05 table:has(textarea) textarea {
+  width: min(100%, 720px);
+}
+
+#options_05 table:has(textarea) select:focus,
+#options_05 table:has(textarea) input:focus,
+#options_05 table:has(textarea) textarea:focus {
+  border-color: var(--tt-gold) !important;
+  outline: 2px solid rgba(242, 167, 43, .35);
+  outline-offset: 1px;
+}
+
+/* Forms and controls */
+input,
+select,
+textarea,
+button,
+input[type="submit"],
+input[type="button"] {
+  min-height: 38px;
+  border: 1px solid #586169;
+  border-radius: 5px;
+  color: #111;
+  background: #fff;
+  font: inherit;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  padding: 7px 13px;
+  border-color: var(--tt-bronze);
+  color: #fff;
+  background: #40321f;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+  background: var(--tt-red);
+}
+
+.mobile-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+div.mobile-wrap {
+  border-color: var(--tt-line);
+  background: transparent;
+}
+
+/* The real league has 30-player rosters plus draft picks on the trade screen. */
+#body_options_05 .report th {
+  padding: 5px 8px;
+}
+
+#body_options_05 .report td {
+  padding: 4px 8px;
+  line-height: 1.2;
+}
+
+#body_options_05 input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  min-height: 0;
+  margin: 0;
+}
+
+.homepagemessage {
+  border-color: var(--tt-line);
+  color: var(--tt-text);
+  background: var(--tt-panel) !important;
+}
+
+.homepagemessage td,
+.homepagemessage p,
+.homepagemessage div {
+  color: var(--tt-text);
+}
+
+.pagefooter {
+  padding: 18px 12px 28px;
+  border-top: 1px solid var(--tt-line);
+  color: var(--tt-muted);
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+
+  .pagebody {
+    padding-inline: 10px;
+  }
+
+  #homepagecolumns,
+  #homepagecolumns > tbody,
+  #homepagecolumns > tbody > tr,
+  #homepagecolumns > tbody > tr > .homepagecolumn,
+  #homepagecolumns > tr,
+  #homepagecolumns > tr > .homepagecolumn {
+    display: block;
+    width: 100% !important;
+  }
+
+  #homepagecolumns {
+    border-spacing: 0;
+  }
+
+  #standings {
+    min-width: 720px;
+  }
+
+  #standings .franchiseicon,
+  .franchiseicon {
+    width: 240px;
+  }
+}
+
+/* MFL expands the League Tabs list outside its zero-height mobile shell. */
+@media (max-width: 48em) {
+  .myfantasyleague_tabmenu {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body,
+  body.full-width,
+  .pagebody {
+    background:
+      linear-gradient(180deg, rgba(143, 35, 35, 0.12), transparent 22rem),
+      var(--tt-bg) !important;
+    background-attachment: scroll;
+  }
+
+  .pagebody {
+    padding: 0 6px 24px;
+  }
+
+  #home #contentframe::before {
+    margin: 8px 0;
+    border-radius: 4px;
+    background-size: contain;
+  }
+
+  #hsubmenu {
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+
+  #hsubmenuitems a {
+    padding: 9px 12px;
+    font-size: 0.82rem;
+  }
+
+  .myfantasyleague_tabmenu {
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  .myfantasyleague_tabmenu li a {
+    padding: 9px 12px;
+    font-size: 0.86rem;
+  }
+
+  .homepagemodule,
+  .report {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.28);
+  }
+
+  caption,
+  .homepagemodule caption,
+  .homepagecolumn .homepagemodule caption {
+    padding: 10px 11px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .report th,
+  .homepagemodule th,
+  .report td,
+  .homepagemodule td {
+    padding: 8px;
+  }
+
+  .reportfooter td,
+  td.reportfooter {
+    white-space: normal;
+  }
+
+  #league_chat input[type="text"],
+  #league_chat textarea {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .pagefooter table,
+  .pagefooter tbody,
+  .pagefooter tr,
+  .pagefooter td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
