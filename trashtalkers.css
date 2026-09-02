@@ -14,8 +14,8 @@
   --tt-radius: 8px;
   --tt-max-width: 1280px;
   --tt-banner: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-banner.jpg");
-  --tt-background: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-background.png");
-  --tt-hall-background: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-background.png");
+  --tt-background: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-background-v2.png");
+  --tt-hall-background: url("https://ffdazler.github.io/TrashTalkers/assets/branding/trashtalkers-background-v2.png");
 }
 
 * {
@@ -32,7 +32,7 @@ body.full-width {
   margin: 0;
   color: var(--tt-text);
   background:
-    linear-gradient(rgba(5, 7, 8, 0.55), rgba(5, 7, 8, 0.72)),
+    linear-gradient(rgba(5, 7, 8, 0.12), rgba(5, 7, 8, 0.28)),
     var(--tt-background) center top / cover no-repeat fixed !important;
   background-attachment: fixed;
   font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
@@ -100,7 +100,7 @@ body.full-width .pagebody {
   body,
   body.full-width {
     background:
-      linear-gradient(rgba(5, 7, 8, 0.45), rgba(5, 7, 8, 0.65)),
+      linear-gradient(rgba(5, 7, 8, 0.08), rgba(5, 7, 8, 0.22)),
       var(--tt-hall-background) center top / cover no-repeat fixed !important;
   }
 }
