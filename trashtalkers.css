@@ -1,5 +1,5 @@
-/* TrashTalkers MFL theme — staging build 6
-   Complete appearance baseline: Military Heroes production build 13 */
+/* TrashTalkers MFL theme — production build 7
+   Complete appearance baseline: Military Heroes production build 16 */
 :root {
   --tt-bg: #06090d;
   --tt-panel: rgba(9, 14, 18, 0.97);
@@ -451,6 +451,24 @@ form[action*="add_drop"] .report th a:visited {
   background: var(--tt-panel-hover);
 }
 
+/* Match player-list typography and rhythm to the compact My Options menu. */
+.report tr:has(a[class^="position_"]) > td,
+.homepagemodule tr:has(a[class^="position_"]) > td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: .9rem;
+  line-height: 1.35;
+}
+
+/* Carry the same compact rhythm through ordinary data reports sitewide. */
+.report tbody > tr:not(.reportfooter):not(.salary_warning_row):not(:has(> td.reportfooter)):not(:has(input, select, textarea, button)) > td,
+.homepagemodule tbody > tr:not(.reportfooter):not(.salary_warning_row):not(:has(> td.reportfooter)):not(:has(input, select, textarea, button)) > td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: .9rem;
+  line-height: 1.35;
+}
+
 .reportfooter td,
 td.reportfooter {
   padding: 9px 10px;
@@ -742,8 +760,8 @@ div.mobile-wrap {
 }
 
 #body_options_05 .report td {
-  padding: 4px 8px;
-  line-height: 1.2;
+  padding: 2px 8px;
+  line-height: 1.35;
 }
 
 #body_options_05 input[type="checkbox"] {
