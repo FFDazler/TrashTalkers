@@ -1,4 +1,4 @@
-/* TrashTalkers MFL theme — production build 8
+/* TrashTalkers MFL theme — production build 10
    Complete appearance baseline: Military Heroes production build 16 */
 :root {
   --tt-bg: #06090d;
@@ -938,4 +938,20 @@ div.mobile-wrap {
 #ajax_ls .ls_changed a:link,
 #ajax_ls .ls_changed a:visited {
   color: #ffe0a3 !important;
+}
+
+/* Live scoring: remove third-party Freestar advertising banners and their space. */
+#body_ajax_ls [data-freestar-ad],
+#ajax_ls [data-freestar-ad],
+#body_ajax_ls #fs-sticky-footer,
+#body_ajax_ls .fs-sticky-footer,
+#body_ajax_ls #fs-slot-footer-wrapper,
+#body_ajax_ls #myfantasyleague_stickyfooter {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
