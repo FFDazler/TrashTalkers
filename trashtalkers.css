@@ -1,4 +1,4 @@
-/* TrashTalkers MFL theme — production build 7
+/* TrashTalkers MFL theme — production build 8
    Complete appearance baseline: Military Heroes production build 16 */
 :root {
   --tt-bg: #06090d;
@@ -921,4 +921,21 @@ div.mobile-wrap {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+}
+
+/* Live scoring: keep newly updated score and stat cells readable. */
+#body_ajax_ls .ls_changed,
+#ajax_ls .ls_changed {
+  background: #3a2413 !important;
+  color: #fff4df !important;
+  box-shadow: inset 0 0 0 1px #c7954f;
+}
+
+#body_ajax_ls .ls_changed a,
+#body_ajax_ls .ls_changed a:link,
+#body_ajax_ls .ls_changed a:visited,
+#ajax_ls .ls_changed a,
+#ajax_ls .ls_changed a:link,
+#ajax_ls .ls_changed a:visited {
+  color: #ffe0a3 !important;
 }
